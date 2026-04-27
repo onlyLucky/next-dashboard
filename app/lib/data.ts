@@ -30,6 +30,7 @@ export async function fetchRevenue() {
   }
 }
 
+// 获取最后 5 笔发票 排序数据
 export async function fetchLatestInvoices() {
   try {
     const data = await sql<LatestInvoiceRaw[]>`
@@ -50,6 +51,8 @@ export async function fetchLatestInvoices() {
   }
 }
 
+
+// 获取卡片数据
 export async function fetchCardData() {
   try {
     // You can probably combine these into a single SQL query
